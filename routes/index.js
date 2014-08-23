@@ -1,15 +1,15 @@
 
-var Risepay = require('../lib/risepay');
+	var Risepay = require('../lib/risepay');
 
-Risepay.connect("YourUserName", "YourPassword");
+	Risepay.connect("YourUserName", "YourPassword");
 
 module.exports = function(app){
 
 
 
-				app.get("/", function(req, res){
-						res.render("index", {});
-					});
+							app.get("/", function(req, res){
+									res.render("index", {});
+								});
 
 
 					app.post("/charge", function (req, res) {
@@ -20,25 +20,25 @@ module.exports = function(app){
 					  var CVNum = req.body.CVNum;
 					  var Amount = req.body.Amount;
 
-						  var Data = {
-						  		name: name,
-						  		CardNum: CardNum,
-						  		ExpDate: date,
-						  		CVNum: CVNum,
-						  		Amount: Amount
-						  };
+							  var Data = {
+							  		name: name,
+							  		CardNum: CardNum,
+							  		ExpDate: date,
+							  		CVNum: CVNum,
+							  		Amount: Amount
+							  };
 
-						  Risepay.auth(Data, function(Databack){
+							  Risepay.auth(Data, function(Databack){
 
-						  });
+							  });
 
-						var message = "Thanks " + name + " for you Purchase.";
-						  var msg = {
-						  	title: "Your Order is Procesing!",
-						  	message: message
-						  };
+									var message = "Thanks " + name + " for you Purchase.";
+									  var msg = {
+									  	title: "Your Order is Procesing!",
+									  	message: message
+									  };
 
-					  		res.send(msg, 200);
+					  					res.send(msg, 200);
 
 					});
 
