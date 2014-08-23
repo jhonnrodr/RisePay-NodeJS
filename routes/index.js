@@ -1,5 +1,7 @@
 
-var Payments = require("../lib/test");
+var Risepay = require('../lib/risepay');
+
+Risepay.connect("YourUserName", "YourPassword");
 
 module.exports = function(app){
 
@@ -26,7 +28,7 @@ module.exports = function(app){
 						  		Amount: Amount
 						  };
 
-						  Payments.createTransaction(Data, function(Databack){
+						  Risepay.auth(Data, function(Databack){
 
 						  });
 
