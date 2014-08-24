@@ -17,14 +17,6 @@ module.exports = function(app){
 
 					app.post("/charge", function (req, res) {
 
-/*								  var Data = {
-								  		name: req.body.cardholdername,
-								  		CardNum: req.body.CardNum,
-								  		ExpDate: req.body.months + req.body.year,
-								  		CVNum: req.body.CVNum,
-								  		Amount: 10
-								  };*/
-
 
 
 								  Risepay.createTransaction({
