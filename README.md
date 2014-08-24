@@ -22,7 +22,8 @@ How to use
 		ExpDate : ExpDate,
 		Amount: Amount
 		}, function(data){
-			console.log();
+			var json = JSON.parse(data);
+			console.log(json);
 			});	
 
 To see what you can do with the RisePay API, take a look at their documentation.
