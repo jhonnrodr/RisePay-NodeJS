@@ -17,37 +17,25 @@ module.exports = function(app){
 
 					app.post("/charge", function (req, res) {
 
-						  var name = req.body.cardholdername;
-						  var CardNum =  req.body.CardNum;
-						  var date =  req.body.months + req.body.year;
-						  var CVNum = req.body.CVNum;
-						  var Amount = req.body.Amount;
 
-								  var Data = {
-								  		name: name,
-								  		CardNum: CardNum,
-								  		ExpDate: date,
-								  		CVNum: CVNum,
-								  		Amount: Amount
-								  };
-
-								  risePay.createTransaction({
-									CardNum : CardNum,
-									ExpDate : date,
-									Amount: Amount,
-									TransType: "AUTH"
+								  Risepay.createTransaction({
+									CardNum : req.body.CardNum,
+									ExpDate : req.body.months + req.body.year,
+									Amount: 10,
+									TransType: "SALE"
 									}, function(data){
 										var json = JSON.parse(data);
-										console.log(json);
-									});	
-
-										var message = "Thanks " + name + " for you Purchase.";
-										  var msg = {
-										  	title: "Your Order is Procesing!",
+										var message = json;
+										var msg = {
+										  	title: json,
 										  	message: message
 										  };
 
 						  					res.send(msg, 200);
+									});	
+
+										
+										  
 
 					});
 

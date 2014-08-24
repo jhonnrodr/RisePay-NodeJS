@@ -2,6 +2,11 @@
 var express = require('express');
 
 var app = express();
+
+var multipart = require('connect-multiparty');
+app.use(express.bodyParser());
+app.use(multipart());
+
 var path = require('path');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
