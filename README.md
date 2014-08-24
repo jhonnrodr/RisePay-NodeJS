@@ -26,6 +26,6 @@ How to use
 			console.log(json);
 			});	
 
-To see what you can do with the RisePay API, take a look at their documentation.
+To see what you can do with the RisePay API, take a look at their [documentation](https://gateway1.risepay.com/vt/nethelp/default.htm?turl=Documents%2Fsoapimplementation.htm).
 
 
