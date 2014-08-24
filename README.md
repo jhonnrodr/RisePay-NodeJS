@@ -10,12 +10,20 @@ First require RisePay
 	
 	var risePay = require('../lib/risepay');
 
-	risepay.connect({
+	risePay.connect({
 			username: "YourUserName",
 			password: "YourPassword" 
 		});
 
+How to use
 	
+	risePay.auth({
+		CardNum : CardNum,
+		ExpDate : ExpDate,
+		Amount: Amount
+		}, function(data){
+			console.log();
+			});	
 
 To see what you can do with the RisePay API, take a look at their documentation.
 
