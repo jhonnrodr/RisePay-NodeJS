@@ -1,7 +1,10 @@
 
 	var Risepay = require('../lib/risepay');
 
-	Risepay.connect("YourUserName", "YourPassword");
+	Risepay.connect({
+		username: "YourUserName",
+		password: "YourPassword" 
+	});
 
 module.exports = function(app){
 
