@@ -7,7 +7,7 @@ A Node.js module for interacting with the RisePay API
 
 First require RisePay
 
-	````
+	
 	var risePay = require('../lib/risepay');
 
 	risepay.connect({
@@ -15,7 +15,7 @@ First require RisePay
 			password: "YourPassword" 
 		});
 
-	````
+	
 
 To see what you can do with the RisePay API, take a look at their documentation.
 
