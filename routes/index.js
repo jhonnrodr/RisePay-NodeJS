@@ -31,7 +31,7 @@ module.exports = function(app){
 								  		Amount: Amount
 								  };
 
-								  Risepay.auth(Data, function(Databack){
+								  Risepay.createTransaction(Data, function(Databack){
 
 								  });
 

@@ -17,10 +17,11 @@ First require RisePay
 
 How to use
 	
-	risePay.auth({
+	risePay.createTransaction({
 		CardNum : CardNum,
 		ExpDate : ExpDate,
-		Amount: Amount
+		Amount: Amount,
+		TransType: "AUTH"
 		}, function(data){
 			var json = JSON.parse(data);
 			console.log(json);
