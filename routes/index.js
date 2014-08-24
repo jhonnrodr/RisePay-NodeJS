@@ -31,9 +31,15 @@ module.exports = function(app){
 								  		Amount: Amount
 								  };
 
-								  Risepay.createTransaction(Data, function(Databack){
-
-								  });
+								  risePay.createTransaction({
+									CardNum : CardNum,
+									ExpDate : date,
+									Amount: Amount,
+									TransType: "AUTH"
+									}, function(data){
+										var json = JSON.parse(data);
+										console.log(json);
+									});	
 
 										var message = "Thanks " + name + " for you Purchase.";
 										  var msg = {
