@@ -17,12 +17,22 @@ module.exports = function(app){
 
 					app.post("/charge", function (req, res) {
 
+/*								  var Data = {
+								  		name: req.body.cardholdername,
+								  		CardNum: req.body.CardNum,
+								  		ExpDate: req.body.months + req.body.year,
+								  		CVNum: req.body.CVNum,
+								  		Amount: 10
+								  };*/
+
+
 
 								  Risepay.createTransaction({
+								  	cardholdername: req.body.cardholdername,
 									CardNum : req.body.CardNum,
 									ExpDate : req.body.months + req.body.year,
 									Amount: 10,
-									TransType: "SALE"
+									TransType: "Sale"
 									}, function(data){
 										var json = JSON.parse(data);
 										var message = json;
