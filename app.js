@@ -2,7 +2,7 @@
 var express = require('express');
 
 var app = express();
-path 	= require('path');
+var path = require('path');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.bodyParser());
