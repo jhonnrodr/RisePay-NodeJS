@@ -14,16 +14,16 @@ module.exports = function(app){
 									//res.render("index", {});
 									 Risepay.createTransaction({
 								  	cardholdername: "Jhonny",
-									CardNum : "4242424242424242",
-									ExpDate : "1114",
+									CardNum : "5149612222222229",
+									ExpDate : "1214",
 									Amount: 10,
-									TransType: "Sale",
-									PNRef: PNRef,
-									ExtData: ExtData,
-									CVNum: "123",
-									InvNum: InvNum,
-									Zip: Zip,
-									Street: Street,
+									TransType: "Auth",
+									PNRef: "11",
+									ExtData: null,
+									CVNum: "678",
+									InvNum: "ABC123",
+									Zip: "33139",
+									Street: "1880 Alton Road",
 									}, function(data){
 										var json = JSON.parse(data);
 
