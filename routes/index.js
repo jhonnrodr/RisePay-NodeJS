@@ -8,18 +8,11 @@
 
 module.exports = function(app){
 
-
+//Testing Api via Console
 
 							app.get("/", function(req, res){
-									res.render("index", {});
-								});
-
-
-					app.post("/charge", function (req, res) {
-
-
-
-								  Risepay.createTransaction({
+									//res.render("index", {});
+									 Risepay.createTransaction({
 								  	cardholdername: "Jhonny",
 									CardNum : "4242424242424242",
 									ExpDate : "1114",
@@ -33,17 +26,14 @@ module.exports = function(app){
 									Street: Street,
 									}, function(data){
 										var json = JSON.parse(data);
-										var message = json;
-										var msg = {
-										  	title: json,
-										  	message: message
-										  };
 
-						  					res.send(msg, 200);
+						  					res.send(json);
 									});	
 
-										
-										  
+								});
+
+
+					app.post("/charge", function (req, res) {
 
 					});
 
