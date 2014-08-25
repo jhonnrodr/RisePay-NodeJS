@@ -22,7 +22,7 @@ How to use
 									CardNum : "4242424242424242",
 									ExpDate : "1114",
 									Amount: 10,
-									TransType: "Sale",
+									TransType: "Auth",
 									PNRef: PNRef,
 									ExtData: ExtData,
 									CVNum: "123",
