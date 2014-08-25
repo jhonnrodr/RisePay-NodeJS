@@ -3,7 +3,6 @@ RisePay-NodeJS
 
 A Node.js module for interacting with the RisePay API
 
-`npm install risepay`
 
 First require RisePay
 
