@@ -8,24 +8,31 @@ A Node.js module for interacting with the RisePay API
 First require RisePay
 
 	
-	var risePay = require('../lib/risepay');
+	var Risepay = require('../lib/risepay');
 
-	risePay.connect({
+	Risepay.connect({
 			username: "YourUserName",
 			password: "YourPassword" 
 		});
 
 How to use
 	
-	risePay.createTransaction({
-		CardNum : CardNum,
-		ExpDate : ExpDate,
-		Amount: Amount,
-		TransType: "AUTH"
-		}, function(data){
-			var json = JSON.parse(data);
-			console.log(json);
-			});
+	Risepay.createTransaction({
+								  	cardholdername: "Jhonny",
+									CardNum : "4242424242424242",
+									ExpDate : "1114",
+									Amount: 10,
+									TransType: "Sale",
+									PNRef: PNRef,
+									ExtData: ExtData,
+									CVNum: "123",
+									InvNum: InvNum,
+									Zip: Zip,
+									Street: Street,
+									}, function(data){
+										var json = JSON.parse(data);
+										console.log(json);
+										});		
 
 TransType				
 	Identifies the type of credit card transaction being made. Valid values are:

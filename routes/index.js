@@ -20,11 +20,17 @@ module.exports = function(app){
 
 
 								  Risepay.createTransaction({
-								  	cardholdername: req.body.cardholdername,
-									CardNum : req.body.CardNum,
-									ExpDate : req.body.months + req.body.year,
+								  	cardholdername: "Jhonny",
+									CardNum : "4242424242424242",
+									ExpDate : "1114",
 									Amount: 10,
-									TransType: "Sale"
+									TransType: "Sale",
+									PNRef: PNRef,
+									ExtData: ExtData,
+									CVNum: "123",
+									InvNum: InvNum,
+									Zip: Zip,
+									Street: Street,
 									}, function(data){
 										var json = JSON.parse(data);
 										var message = json;
