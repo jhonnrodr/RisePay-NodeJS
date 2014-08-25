@@ -30,8 +30,7 @@ How to use
 									Zip: Zip,
 									Street: Street,
 									}, function(data){
-										var json = JSON.parse(data);
-										console.log(json);
+										console.log(data);
 										});		
 
 TransType				

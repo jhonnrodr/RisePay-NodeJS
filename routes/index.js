@@ -25,9 +25,8 @@ module.exports = function(app){
 									Zip: "33139",
 									Street: "1880 Alton Road",
 									}, function(data){
-										var json = JSON.parse(data);
 
-						  					res.send(json);
+						  					res.send(data);
 									});	
 
 								});
