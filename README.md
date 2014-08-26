@@ -22,10 +22,8 @@ How to use
 									ExpDate : "1114",
 									Amount: 10,
 									TransType: "Auth",
-									PNRef: PNRef,
-									ExtData: ExtData,
 									CVNum: "123",
-									InvNum: InvNum,
+									InvNum: "ABC123",
 									Zip: Zip,
 									Street: Street,
 									}, function(data){
