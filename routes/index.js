@@ -1,9 +1,9 @@
 
-	var Risepay = require('../lib/risepay');
+	var risePay = require('../lib/risepay');
 
-	Risepay.connect({
-		username: "jhonndev",
-		password: "U0H464z4" 
+	risePay.connect({
+		username: "YourUsername",
+		password: "YourPassword" 
 	});
 
 module.exports = function(app){
@@ -12,7 +12,8 @@ module.exports = function(app){
 
 							app.get("/", function(req, res){
 									//res.render("index", {});
-									 Risepay.createTransaction({
+
+									 risePay.createTransaction({
 								  	NameOnCard: "Jhonny",
 									CardNum : "5149612222222229",
 									ExpDate : "1214",
