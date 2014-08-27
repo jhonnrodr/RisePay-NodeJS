@@ -12,8 +12,8 @@ module.exports = function(app){
 
 							app.get("/", function(req, res){
 									//res.render("index", {});
-									
-									 risePay.createTransaction({
+
+									 risePay.sale({
 								  	NameOnCard: "Jhonny",
 									CardNum : "5149612222222229",
 									ExpDate : "1214",
