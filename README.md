@@ -3,7 +3,12 @@ RisePay-NodeJS
 
 A Node.js module for interacting with the RisePay API
 
+<hr>
+### Table of Contents
+**[Initialization](#initialization)** 
+<hr>
 
+### Initialization
 First require RisePay
 
 	
