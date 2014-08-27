@@ -14,9 +14,9 @@ First require RisePay
 			password: "YourPassword" 
 		});
 
-How to use
+Make Sale - make a purchase using a credit card
 	
-	Risepay.createTransaction({
+	Risepay.sale({
 								  	cardholdername: "Jhonny",
 									CardNum : "4242424242424242",
 									ExpDate : "1114",
