@@ -14,20 +14,20 @@ First require RisePay
 			password: "YourPassword" 
 		});
 
-Make Sale - make a purchase using a credit card
+How to make a Sale
 	
 	Risepay.sale({
-								  	cardholdername: "Jhonny",
-									CardNum : "4242424242424242",
-									ExpDate : "1114",
-									Amount: 10,
-									TransType: "Auth",
-									CVNum: "123",
-									InvNum: "ABC123",
-									Zip: Zip,
-									Street: Street,
-									}, function(data){
-										console.log(data);
+					cardholdername: "Jhonny",
+					CardNum : "4242424242424242",
+					ExpDate : "1114",
+					Amount: 10,
+					TransType: "Auth",
+					CVNum: "123",
+					InvNum: "ABC123",
+					Zip: Zip,
+					Street: Street,
+						}, function(data){
+							console.log(data);
 										});		
 
 TransType				
