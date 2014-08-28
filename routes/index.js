@@ -18,7 +18,6 @@ module.exports = function(app){
 									CardNum : "5149612222222229",
 									ExpDate : "1214",
 									Amount: 10,
-									TransType: "Auth",
 									CVNum: "678",
 									InvNum: "ABC123",
 									Zip: "33139",
