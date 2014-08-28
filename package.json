@@ -8,6 +8,7 @@
     "node-uuid": "~1.4.1",
     "body-parser": "*",
     "connect-multiparty": "*",
-    "request": "*"
+    "request": "*",
+    "xml2json": "*"
   }
 }
