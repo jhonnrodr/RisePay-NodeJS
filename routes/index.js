@@ -6,8 +6,6 @@
 		password: "password" 
 	});
 
-var parser = require('xml2json');
-
 
 module.exports = function(app){
 
@@ -28,7 +26,7 @@ module.exports = function(app){
 									}, function(data){
 											
 
-						  					res.send(data.RespMSG);
+						  					res.send(data.json);
 									});	
 
 								});
