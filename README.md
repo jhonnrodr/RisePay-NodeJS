@@ -26,7 +26,6 @@ How to make a Sale
 					CardNum : "4242424242424242",
 					ExpDate : "1114",
 					Amount: 10,
-					TransType: "Auth",
 					CVNum: "123",
 					InvNum: "ABC123",
 					Zip: Zip,
