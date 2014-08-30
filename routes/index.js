@@ -22,6 +22,7 @@ module.exports = function(app){
 									InvNum: "ABC123",
 									Zip: "33139",
 									Street: "1880 Alton Road",
+									Customer: "JR"
 									}, function(data){
 											
 
