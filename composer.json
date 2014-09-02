@@ -1,0 +1,43 @@
+{
+
+    "name": "Risepay-NodeJS",
+    "description": "Risepay-NodeJS library helps you to connect to the risepay API payment",
+    "keywords": ["package", "dependency", "autoload", "wrapper","nodejs","library","risepay"],
+    "homepage": "http://www.risepay.com/",
+    "type": "library",
+    "license": "",
+    "authors": [
+        {
+            "name": "Jhonnatan Rodriguez"        
+        },
+        {
+            "name": "Francisco Perez"    
+        },
+        {
+            "name": "Kamel Bacha"
+        }
+
+    ],
+    "support": {
+        "email": "contactus@risepay.com",
+        "telephone number": "888-582-6859"
+    },
+    "require": {
+        "express": "3.3.5",
+        "ejs": "*",
+        "stringify": "*",
+        "node-uuid": "~1.4.1",
+        "body-parser": "*",
+        "connect-multiparty": "*",
+        "request": "*",
+        "xml2json": "*"
+    },
+    "require-dev": {
+        "nodejs": "*"
+    },
+    "suggest": {
+        "ext-zip": "Enabling the zip extension allows you to unzip archives, and allows gzip compression of all internet traffic",
+        "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages"
+    }
+
+}
