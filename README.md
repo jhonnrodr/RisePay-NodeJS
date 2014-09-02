@@ -25,8 +25,8 @@ First require RisePay
 	var Risepay = require('../lib/risepay');
 
 	Risepay.connect({
-			username: "YourUserName",
-			password: "YourPassword" 
+			username: "gatewayApiUser",
+			password: "userPassword" 
 		});
 
 ### Sale Transaction
