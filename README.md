@@ -19,10 +19,13 @@ A Node.js module for interacting with the RisePay API
 
 
 ### Initialization
-First require RisePay
-
+NPM install
 	
-	var Risepay = require('../lib/risepay');
+	npm install risepay
+
+Require RisePay
+	
+	var Risepay = require('risepay');
 
 	Risepay.connect({
 			username: "gatewayApiUser",
@@ -118,6 +121,6 @@ To return a payment for already batched transaction:
 
 
 	
-To see what you can do with the RisePay API, take a look at their [documentation](https://gateway1.risepay.com/vt/nethelp/default.htm?turl=Documents%2Fsoapimplementation.htm).
+To see complete list of an extra RisePay API variables, take a look at their <a href='https://gateway1.risepay.com/vt/nethelp/Documents/processcreditcard.htm'>documentation</a>.
 
 
