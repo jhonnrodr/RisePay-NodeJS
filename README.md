@@ -44,8 +44,12 @@ To make a purchase using a credit card:
 					InvNum: "ABC123",
 					Zip: Zip,
 					Street: Street,
-						}, function(data){
-							console.log(data);
+						}, function(resp){
+							if(resp.RespMSG == "Approved"){
+								console.log("Approved. Transaction ID = " + resp.PNRef);
+								}else{
+									console.log("Declined: " + resp.Message);
+								}
 										});		
 
 ### Authorization Transaction
