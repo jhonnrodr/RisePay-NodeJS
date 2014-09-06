@@ -1,15 +1,13 @@
 
-	var risePay = require('../lib/risepay');
+	var risePay = require('risepay');
 
 	risePay.connect({
-		username: "jhonndev",
-		password: "U0H464z4" 
+		username: "demo",
+		password: "demo" 
 	});
 
 
 module.exports = function(app){
-
-//Testing Api via Console
 
 							app.get("/", function(req, res){
 
@@ -23,21 +21,17 @@ module.exports = function(app){
 									Zip: "33139",
 									Street: "1880 Alton Road",
 									Customer: "JR"
-									}, function(data){
+									}, function(resp){
 											
-
-						  					res.send(data.Message);
+											if(resp.RespMSG == "Approved"){
+												console.log("Approved. Transaction ID = " + resp.PNRef);
+												console.log("AuthCode = " + resp.AuthCode)
+											}else{
+												console.log("Declined: " + resp.Message);
+											}
+						  					res.send(resp);
 									});	
 
 								});
-
-
-					app.get("/test", function (req, res) {
-						
-					});
-
-
-
-
 
 }
