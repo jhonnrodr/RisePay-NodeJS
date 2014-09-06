@@ -26,7 +26,7 @@ module.exports = function(app){
 									}, function(data){
 											
 
-						  					res.send(data.json);
+						  					res.send(data.Message);
 									});	
 
 								});
