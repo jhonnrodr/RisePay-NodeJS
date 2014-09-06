@@ -9,6 +9,7 @@
     "body-parser": "*",
     "connect-multiparty": "*",
     "request": "*",
-    "xml2json": "*"
+    "xml2json": "*",
+    "risepay": "*"
   }
 }
