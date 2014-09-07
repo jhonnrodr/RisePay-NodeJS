@@ -22,7 +22,7 @@ module.exports = function(app){
 									Street: "1880 Alton Road",
 									Customer: "JR"
 									}, function(resp){
-											if(resp.RespMSG == "Approved"){
+											if(resp.Approved){
 												console.log("Approved. Transaction ID = " + resp.PNRef);
 												console.log("AuthCode = " + resp.AuthCode)
 											}else{

@@ -45,7 +45,7 @@ To make a purchase using a credit card:
 					Zip: Zip,
 					Street: Street,
 						}, function(resp){
-							if(resp.RespMSG == "Approved"){
+							if(resp.Approved){
 								console.log("Approved. Transaction ID = " + resp.PNRef);
 								}else{
 									console.log("Declined: " + resp.Message);
