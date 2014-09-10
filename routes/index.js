@@ -2,8 +2,8 @@
 	var risePay = require('../lib/risepay');
 
 	risePay.connect({
-		username: "jhonndev",
-		password: "U0H464z4" 
+		username: "demo",
+		password: "demo" 
 	});
 
 
