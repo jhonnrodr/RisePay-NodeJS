@@ -3,6 +3,9 @@ RisePay-NodeJS -- Simple Risepay Payment API wrapper
 A Node.js module for interacting with the RisePay API
 
 <hr>
+You can request developer credentials from our <a href='http://sales.risepay.com/rise-dev-access.html'>Dev Portal</a>.</br> If you would like to certify your application, then submit a <a href='http://sales.risepay.com/rise-cert-lab-access.html'>Cert Lab request</a>.
+<hr>
+
 ### Table of Contents
 **[Initialization](#initialization)**
 
@@ -20,111 +23,120 @@ A Node.js module for interacting with the RisePay API
 
 ### Initialization
 NPM install
-	
-	npm install risepay
+
+  ```javascript
+  npm install risepay
+  ```
 
 Require RisePay
-	
-	var Risepay = require('risepay');
+  ```	
+  var risePay = require('risepay');
 
-	Risepay.connect({
-			username: "gatewayApiUser",
-			password: "userPassword" 
-		});
+  risePay.connect({
+  username: "gatewayApiUser",
+  password: "userPassword" 
+  });
+  ```
 
 ### Sale Transaction
 To make a purchase using a credit card:
 	
-	Risepay.sale({
-					cardholdername: "Jhonny",
-					CardNum : "4242424242424242",
-					ExpDate : "1114",
-					Amount: 10,
-					CVNum: "123",
-					InvNum: "ABC123",
-					Zip: Zip,
-					Street: Street,
-						}, function(resp){
-							if(resp.Approved){
-								console.log("Approved. Transaction ID = " + resp.PNRef);
-								}else{
-									console.log("Declined: " + resp.Message);
-								}
-										});		
+	risePay.sale({
+			NameOnCard: "Jhonny",
+			CardNum : "5149612222222229",
+			ExpDate : "1214",
+			Amount: 10,
+			CVNum: "678"
+		}, function(resp){
+			if(resp.Approved){
+				res.send("Approved. Transaction ID = " + resp.PNRef);
+				res.send("AuthCode = " + resp.AuthCode)
+			}else{
+				res.send("Declined: " + resp.RespMSG);
+			}
+		});	
 
 ### Authorization Transaction
 To make an authorization using a credit card:
 
-	Risepay.auth({
-					cardholdername: "Jhonny",
-					CardNum : "4242424242424242",
-					ExpDate : "1114",
-					Amount: 10,
-					CVNum: "123",
-					InvNum: "ABC123",
-					Zip: Zip,
-					Street: Street,
-						}, function(data){
-							console.log(data);
-										});		
+	risePay.auth({
+			NameOnCard: "Jhonny",
+			CardNum : "5149612222222229",
+			ExpDate : "1214",
+			Amount: 10,
+			CVNum: "678"
+		}, function(resp){
+			if(resp.Approved){
+				res.send("Approved. Transaction ID = " + resp.PNRef);
+				res.send("AuthCode = " + resp.AuthCode)
+			}else{
+				res.send("Declined: " + resp.RespMSG);
+			}	
+		});	
 
 ### Void Transaction
 
 To void a transaction:
 
-	Risepay.void({
-					cardholdername: "Jhonny",
-					CardNum : "4242424242424242",
-					ExpDate : "1114",
-					Amount: 10,
-					CVNum: "123",
-					InvNum: "ABC123",
-					PNRef: 242123
-					Zip: Zip,
-					Street: Street,
-						}, function(data){
-							console.log(data);
-										});	
+	risePay.void({
+			NameOnCard: "Jhonny",
+			CardNum : "5149612222222229",
+			ExpDate : "1214",
+			Amount: 5,
+			CVNum: "678",
+			PNRef: 1104825
+		}, function(resp){
+			if(resp.Approved){
+				res.send("Approved. Transaction ID = " + resp.PNRef);
+				res.send("AuthCode = " + resp.AuthCode)
+			}else{
+				res.send("Declined: " + resp.Message);
+			}
+		});	
 
 ### Capture Transaction
 
 To capture a previously Authorized transaction:
 	
-	Risepay.capture({
-					cardholdername: "Jhonny",
-					CardNum : "4242424242424242",
-					ExpDate : "1114",
-					Amount: 10,
-					CVNum: "123",
-					InvNum: "ABC123",
-					PNRef: 242123
-					Zip: Zip,
-					Street: Street,
-						}, function(data){
-							console.log(data);
-										});	
+	risePay.capture({
+			NameOnCard: "Jhonny",
+			CardNum : "5149612222222229",
+			ExpDate : "1214",
+			Amount: 5,
+			CVNum: "678",
+			PNRef: 1104825
+		}, function(resp){
+			if(resp.Approved){
+				res.send("Approved. Transaction ID = " + resp.PNRef);
+				res.send("AuthCode = " + resp.AuthCode)
+			}else{
+				res.send("Declined: " + resp.Message);
+			}
+		});	
 
 
 ### Return Transaction
 
 To return a payment for already batched transaction:
 	
-	Risepay.return({
-					cardholdername: "Jhonny",
-					CardNum : "4242424242424242",
-					ExpDate : "1114",
-					Amount: 10,
-					CVNum: "123",
-					InvNum: "ABC123",
-					PNRef: 242123
-					Zip: Zip,
-					Street: Street,
-						}, function(data){
-							console.log(data);
-										});	
+	risePay.return({
+			NameOnCard: "Jhonny",
+			CardNum : "5149612222222229",
+			ExpDate : "1214",
+			Amount: 12,
+			CVNum: "678",
+			PNRef: 1104841
+		}, function(resp){
+			if(resp.Approved){
+				res.send("Approved. Transaction ID = " + resp.PNRef);
+				res.send("AuthCode = " + resp.AuthCode)
+			}else{
+				res.send("Declined: " + resp.RespMSG);
+			}
+		});	
 
 
 	
-To see complete list of an extra RisePay API variables, take a look at their <a href='https://gateway1.risepay.com/vt/nethelp/Documents/processcreditcard.htm'>documentation</a>.
+To see complete list of RisePay API variables, review our <a href='https://gateway1.risepay.com/vt/nethelp/Documents/processcreditcard.htm'>online documentation</a>. </br> You can request developer credentials from our <a href='http://sales.risepay.com/rise-dev-access.html'>Dev Portal</a>.  If you would like to certify your application, then submit a <a href='http://sales.risepay.com/rise-cert-lab-access.html'>Cert Lab request</a>.
 
 
