@@ -22,7 +22,7 @@ module.exports = function(app){
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
@@ -41,7 +41,7 @@ module.exports = function(app){
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
@@ -61,7 +61,7 @@ module.exports = function(app){
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
