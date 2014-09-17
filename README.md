@@ -52,7 +52,7 @@ To make a purchase using a credit card:
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
@@ -70,7 +70,7 @@ To make an authorization using a credit card:
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}	
 		});	
 
@@ -90,7 +90,7 @@ To void a transaction:
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
@@ -110,7 +110,7 @@ To capture a previously Authorized transaction:
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
@@ -131,7 +131,7 @@ To return a payment for already batched transaction:
 				res.send("Approved. Transaction ID = " + resp.PNRef);
 				res.send("AuthCode = " + resp.AuthCode)
 			}else{
-				res.send("Declined: " + resp.RespMSG);
+				res.send("Declined: " + resp.Message);
 			}
 		});	
 
